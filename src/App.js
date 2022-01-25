@@ -32,14 +32,26 @@ function App(props) {
           />}
         />
         <Route 
-          path="/swords"
-          render={(routerProps) => <Index 
+          path="/swords/new"
+          render={(routerProps) => <Create {...routerProps}
             // props/hooks go here
           />}
         />
         <Route 
-          path="/swords/new"
-          render={(routerProps) => <Create 
+          path="/swords/:id/edit"
+          render={(routerProps) => <Edit {...routerProps}
+            // props/hooks go here
+          />}
+        />
+        <Route 
+          path="/swords/:id"
+          render={(routerProps) => <Show {...routerProps}
+            // props/hooks go here
+          />}
+        />
+        <Route 
+          path="/swords"
+          render={(routerProps) => <Index {...routerProps}
             // props/hooks go here
           />}
         />
