@@ -18,8 +18,13 @@ import Edit from "./pages/Edit"
 // PAGES
 
 // HOOKS
+import SwordsHooks from "./hooks/SwordsHooks"
 
 function App(props) {
+  // HOOKS
+  const {swords, setSwords, getSwords} = SwordsHooks()
+
+  // ROUTES
   return (
     <div className="App">
       <Header />
@@ -52,7 +57,8 @@ function App(props) {
         <Route 
           path="/swords"
           render={(routerProps) => <Index {...routerProps}
-            // props/hooks go here
+            swords={swords}
+            getSwords={getSwords}
           />}
         />
       </Switch>
