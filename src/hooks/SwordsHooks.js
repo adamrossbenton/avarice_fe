@@ -6,6 +6,7 @@ function SwordsHooks() {
 
     // GET
     const getSwords = async () => {
+        console.log(url)
         const response = await fetch(url)
         const data = await response.json()
         setSwords(data)
@@ -13,6 +14,7 @@ function SwordsHooks() {
 
     // UPDATE
     const updateSwords = async (sw, id) => {
+        console.log(url)
         await fetch(url + id, {
             method: "patch",
             headers: {
@@ -25,6 +27,7 @@ function SwordsHooks() {
 
     // DELETE
     const deleteSwords = async (sw, id) => {
+        console.log(url)
         await fetch(url + id, {
             method: "delete"
         })
