@@ -22,7 +22,7 @@ import SwordsHooks from "./hooks/SwordsHooks"
 
 function App(props) {
   // HOOKS
-  const {swords, setSwords, getSwords} = SwordsHooks()
+  const {swords, getSwords, updateSwords, deleteSwords} = SwordsHooks()
 
   // ROUTES
   return (
@@ -51,7 +51,9 @@ function App(props) {
         <Route 
           path="/swords/:id"
           render={(routerProps) => <Show {...routerProps}
-            // props/hooks go here
+            swords={swords}
+            updateSwords={updateSwords}
+            deleteSwords={deleteSwords}
           />}
         />
         <Route 
