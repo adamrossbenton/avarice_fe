@@ -17,7 +17,7 @@ function Show(props) {
     // }
 
     return <>
-        <h1>Hello {sword.name}</h1>
+        <h1>{sword.name}</h1>
         <h3>${sword.price}</h3>
         <Link to="/swords"><h4>Return to Swords</h4></Link>
     </>
