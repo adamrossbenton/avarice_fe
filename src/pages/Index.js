@@ -11,9 +11,8 @@ function Index(props) {
     }
     
     const loaded = () => {
-        console.log("Swords: ")
-        console.log(props.swords)
-        return props.swords.map((sw) => (
+        const allSwords = props.swords.data
+        return allSwords.map((sw) => (
             <>
                 <h1>{sw.name}</h1>
                 <h3>{sw.price}</h3>
