@@ -74,7 +74,7 @@ function AdminHooks() {
             console.log("Token: ", token)
             if (token && !token.error) {
                 saveToken(token)
-                history.push("/swords")
+                history.push("/")
             } else {
                 noUser()
             }
