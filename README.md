@@ -79,3 +79,21 @@ At this point, I decided to pivot from the strict and overbearing Buffalo to the
 
 In short, Buffalo is the strict dad that grounds you if you're home at 9:01 for your 9:00 curfew. While Gin is the chill mom that lets you drink at home because she'd "rather you do it under my supervision than at some out-of-control party"
 
+## COMING SOON TO A WEBSITE NEAR YOU!
+
+As this is a small eCommerce site, the typical plan would be to have two frontend apps pinging the same API--a client-facing site and an admin portal. For the purposes of this demo, I have only created a bare-bones admin portal. However, if I decide to continue this project and develop it into a full-fledged armory, then I would add the following features:
+
+#### To Backend:
+* Enhanced route security to ensure only authorized users can modify the database
+* Multiple router groups to allow for other product categories, altered functionality for client-side routes, etc.
+
+#### To Existing Admin Portal:
+* More robust login/logout, to ensure that tokens cannot be falsified and that logout does not inadvertently clear any other sites' tokens from localstorage
+
+#### To New Client-Facing Site:
+* Create user profile
+* Remove most CRUD capability aside from viewing items
+* Add items to cart
+* Process payment information
+* Generate invoice and send to customer email
+* Generate work order to be sent to admin account
