@@ -68,7 +68,7 @@ NOTE: If user is not logged in, all pages/components other than home and login a
 
 #### Go, more like Stop, amirite?
 
-*I started dabbling in Golang maybe a month or so before starting this project, and at that time I had planned on using Buffalo for my API framework. However, once I started building a basic Todos with Buffalo, it quickly became evident that I had made a poor choice for the following reasons:
+I started dabbling in Golang maybe a month or so before starting this project, and at that time I had planned on using Buffalo for my API framework. However, once I started building a basic Todos with Buffalo, it quickly became evident that I had made a poor choice for the following reasons:
 
 * Buffalo is super opinionated and pretty finicky. Think Ruby on Rails, but less friendly and the syntax is scary.
 * I don't know what kind of weird little goblin lives inside my PC but it does NOT like Buffalo for some reason.
