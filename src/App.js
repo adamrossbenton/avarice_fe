@@ -24,7 +24,7 @@ import AdminHooks from "./hooks/AdminHooks"
 function App(props) {
   // HOOKS
   const {swords, getSwords, createSwords, updateSwords, deleteSwords} = SwordsHooks()
-  const {token, setToken, loginUser, handleChange, noUser, handleLogin} = AdminHooks()
+  const {token, setToken, loginUser, handleChange, noUser, ifLoggedIn, handleLogin} = AdminHooks()
 
   // ROUTES
   return (
@@ -53,7 +53,8 @@ function App(props) {
         <Route 
           path="/swords/new"
           render={(routerProps) => <Create {...routerProps}
-          token={token}  
+          token={token}
+          ifLoggedIn={ifLoggedIn}
           createSwords={createSwords}
           />}
         />
@@ -63,6 +64,7 @@ function App(props) {
           render={(routerProps) => <Edit {...routerProps}
             token={token}  
             swords={swords}
+            ifLoggedIn={ifLoggedIn}
             getSwords={getSwords}
             updateSwords={updateSwords}
           />}
@@ -73,6 +75,7 @@ function App(props) {
           render={(routerProps) => <Show {...routerProps}
             token={token}
             swords={swords}
+            ifLoggedIn={ifLoggedIn}
             deleteSwords={deleteSwords}
           />}
         />
@@ -82,6 +85,7 @@ function App(props) {
           render={(routerProps) => <Index {...routerProps}
             token={token}
             swords={swords}
+            ifLoggedIn={ifLoggedIn}
             getSwords={getSwords}
           />}
         />
