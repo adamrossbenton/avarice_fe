@@ -10,19 +10,21 @@ import Main from "./components/Main"
 import Header from "./components/Header"
 import Footer from "./components/Footer"
 
+// PAGES
 import Index from "./pages/Index"
 import Create from "./pages/Create"
 import Show from "./pages/Show"
 import Edit from "./pages/Edit"
-
-// PAGES
+import Login from "./pages/Login"
 
 // HOOKS
 import SwordsHooks from "./hooks/SwordsHooks"
+import AdminHooks from "./hooks/AdminHooks"
 
 function App(props) {
   // HOOKS
   const {swords, getSwords, createSwords, updateSwords, deleteSwords} = SwordsHooks()
+  const {token, setToken, loginUser, handleChange, noUser, handleLogin} = AdminHooks()
 
   // ROUTES
   return (
@@ -36,17 +38,30 @@ function App(props) {
             // props/hooks go here
           />}
         />
+        {/* ADMIN */}
+        <Route 
+          path="/login"
+          render={(routerProps) => <Login {...routerProps}
+            setToken={setToken}
+            loginUser={loginUser}
+            handleChange={handleChange}
+            noUser={noUser}
+            handleLogin={handleLogin}
+          />}
+        />
         {/* CREATE */}
         <Route 
           path="/swords/new"
           render={(routerProps) => <Create {...routerProps}
-            createSwords={createSwords}
+          token={token}  
+          createSwords={createSwords}
           />}
         />
         {/* EDIT */}
         <Route 
           path="/swords/:id/edit"
           render={(routerProps) => <Edit {...routerProps}
+            token={token}  
             swords={swords}
             getSwords={getSwords}
             updateSwords={updateSwords}
@@ -56,6 +71,7 @@ function App(props) {
         <Route 
           path="/swords/:id"
           render={(routerProps) => <Show {...routerProps}
+            token={token}
             swords={swords}
             deleteSwords={deleteSwords}
           />}
@@ -64,6 +80,7 @@ function App(props) {
         <Route 
           path="/swords"
           render={(routerProps) => <Index {...routerProps}
+            token={token}
             swords={swords}
             getSwords={getSwords}
           />}

@@ -1,5 +1,5 @@
 // LIVE DB
-export default "https://avaricebackend.herokuapp.com/"
+// export default "https://avaricebackend.herokuapp.com/"
 
 // LOCAL TEST DB
-// export default "http://localhost:8080/"
+export default "http://localhost:8080/"
