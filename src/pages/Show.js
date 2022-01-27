@@ -20,8 +20,9 @@ function Show(props) {
     return <>
         <h1>{sword.name}</h1>
         <h3>${sword.price}</h3>
-        <Link to="/swords"><h4>Return to Swords</h4></Link>
+        <Link to={`/swords/${sword.id}/edit`}><h4>Edit {sword.name}</h4></Link>
         <form onSubmit={removeSword}><button>Delete {sword.name}</button></form>
+        <Link to="/swords"><h4>Return to Swords</h4></Link>
     </>
 }
 
