@@ -66,11 +66,16 @@ NOTE: If user is not logged in, all pages/components other than home and login a
 
 ## CHALLENGES FACED
 
-Go, more like Stop, amirite?
+####Go, more like Stop, amirite?
 
-* I started dabbling in Golang maybe a month or so before starting this project, and at that time I had planned on using Buffalo for my API framework. However, once I started building a basic Todos with Buffalo, it quickly became evident that I had made a poor choice for the following reasons:
-    * Buffalo is super opinionated and pretty finicky. Think Ruby on Rails, but less friendly and the syntax is scary.
-    * I don't know what kind of weird little goblin lives inside my PC but it does NOT like Buffalo for some reason.
-* At this point, I decided to pivot from the strict and overbearing Buffalo to the much lighter and more freeform Gin
-    * More or less, Gin is to Go what Express is to JS
-* In short, Buffalo is the strict dad that grounds you if you're home at 9:01 for your 9:00 curfew. While Gin is the chill mom that lets you drink at home because she'd "rather you do it under my supervision than at some out-of-control party"
+*I started dabbling in Golang maybe a month or so before starting this project, and at that time I had planned on using Buffalo for my API framework. However, once I started building a basic Todos with Buffalo, it quickly became evident that I had made a poor choice for the following reasons:
+
+* Buffalo is super opinionated and pretty finicky. Think Ruby on Rails, but less friendly and the syntax is scary.
+* I don't know what kind of weird little goblin lives inside my PC but it does NOT like Buffalo for some reason.
+
+At this point, I decided to pivot from the strict and overbearing Buffalo to the much lighter and more freeform Gin
+
+* More or less, Gin is to Go what Express is to JS
+
+In short, Buffalo is the strict dad that grounds you if you're home at 9:01 for your 9:00 curfew. While Gin is the chill mom that lets you drink at home because she'd "rather you do it under my supervision than at some out-of-control party"
+
