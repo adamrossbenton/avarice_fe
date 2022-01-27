@@ -35,7 +35,7 @@ function Create(props) {
     }
 
     return <>
-        <h1>Hello Create</h1>
+        <h1>Create Sword</h1>
         <form onSubmit={handleSubmit}>
             <h3>Name:</h3>
             <input 
