@@ -29,7 +29,7 @@ function App(props) {
   // ROUTES
   return (
     <div className="App">
-      <Header />
+      <Header token={token}/>
       <Switch>
         {/* HOME ROUTE */}
         <Route exact

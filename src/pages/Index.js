@@ -27,17 +27,25 @@ function Index(props) {
         ))
     }
 
-    // Check if logged in
-    if (!token) {
+    const ifLoggedIn = () => {
         return <>
             <h1>ADMIN ACCESS REQUIRED</h1>
-            <Link to="/login"><h3>Login</h3></Link>
+            <Link to="/login"><h3>LOGIN</h3></Link>
         </>
     }
 
+    // Check if logged in
+    // if (!token) {
+    //     return <>
+    //         <h1>ADMIN ACCESS REQUIRED</h1>
+    //         <Link to="/login"><h3>Login</h3></Link>
+    //     </>
+    // }
+    ifLoggedIn()
+
     return <>
         <Link to="/swords/new"><h3>NEW SWORD</h3></Link>
-        {props.swords? loaded() : loading()}
+        {props.token? props.swords? loaded() : loading() : ifLoggedIn()}
     </>
 }
 

@@ -25,6 +25,7 @@ function AdminHooks() {
 
     // LOGIN HOOK
     const loginUser = creds => {
+        console.log(loginUrl)
         return fetch(loginUrl, {
             method: "POST",
             headers: {
@@ -42,7 +43,7 @@ function AdminHooks() {
     const handleChange = e => {
         setNewForm({
             ...newForm,
-            [e.target.name]: e.target.default
+            [e.target.name]: e.target.value
         })
     }
 
@@ -58,6 +59,7 @@ function AdminHooks() {
         if (newForm) {
             const {username} = newForm
             const {password} = newForm
+            console.log(username, password)
             const token = await loginUser({
                 username,
                 password
@@ -65,7 +67,7 @@ function AdminHooks() {
             console.log("Token: ", token)
             if (token && !token.error) {
                 saveToken(token)
-                history.push("/")
+                history.push("/swords")
             } else {
                 noUser()
             }
