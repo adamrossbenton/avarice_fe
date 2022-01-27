@@ -1,6 +1,6 @@
 # AVARICE THE SMITH
 
-So one day I was getting drinks with my cousin and he, apropos of nothing, said "I think I'm gonna start making swords". My first thought was not "how will you source materials of high enough quality?", "how do you plan on acquiring the necessary equipment for a proper smithy?", or "where exactly do you plan to put said materials?". No, my first thought was "you're gonna need a website to sell those bad boys."
+So one day I was getting drinks with my cousin and he, apropos of nothing, said "I think I'm gonna start making swords". My first thought was not "how will you source materials of high enough quality?", "how do you plan on acquiring the necessary equipment for a proper smithy?", or "where exactly do you plan to put said materials?". No, my first thought was "you're gonna need a kickass website to sell those bad boys."
 
 And out of the flames of inebriation arose the boozy phoenix known as AVARICE THE SMITH--a demonstrational eCommerce site to showcase and sell the merchandise of he who would someday proudly don the title of "amateur swordsmith".
 
