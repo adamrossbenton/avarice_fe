@@ -12,11 +12,23 @@ function SwordsHooks() {
         setSwords(data)
     }
 
+    // CREATE
+    const createSwords = async (sw) => {
+        await fetch(url, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(sw)
+        })
+        getSwords()
+    }
+
     // UPDATE
     const updateSwords = async (sw, id) => {
         console.log(url)
         await fetch(url + id, {
-            method: "patch",
+            method: "PATCH",
             headers: {
                 "Content-Type": "application/json"
             },
@@ -26,10 +38,10 @@ function SwordsHooks() {
     }
 
     // DELETE
-    const deleteSwords = async (sw, id) => {
+    const deleteSwords = async (id) => {
         console.log(url)
         await fetch(url + id, {
-            method: "delete"
+            method: "DELETE"
         })
         getSwords()
     }
@@ -37,8 +49,8 @@ function SwordsHooks() {
     // EXPORT HOOKS
     return {
         swords,
-        setSwords,
         getSwords,
+        createSwords,
         updateSwords,
         deleteSwords
     }
