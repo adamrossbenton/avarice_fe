@@ -11,6 +11,7 @@ function Index(props) {
     
     const loaded = () => {
         const allSwords = props.swords.data
+        
         return allSwords.map((sw) => (
             <>
                 <Link to={`/swords/${sw.id}`}><h1>{sw.name}</h1></Link>
@@ -22,6 +23,7 @@ function Index(props) {
     }
 
     return <>
+        <Link to="/swords/new"><h3>NEW SWORD</h3></Link>
         {props.swords? loaded() : loading()}
     </>
 }
