@@ -35,7 +35,8 @@ function App(props) {
         <Route exact
           path="/"
           render={(routerProps) => <Main {...routerProps}
-            // props/hooks go here
+            token={token}
+            ifLoggedIn={ifLoggedIn}
           />}
         />
         {/* ADMIN */}

@@ -3,8 +3,6 @@ import {Link} from "react-router-dom"
 
 function Login(props) {
     
-    
-
     return <>
         <h1>ENTER ADMIN LOGIN INFO</h1>
         <form onSubmit={props.handleLogin}>
