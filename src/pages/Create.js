@@ -105,7 +105,7 @@ function Create(props) {
         </>
     }
 
-    return props.token? loggedIn() : props.ifLoggedIn()
+    return props.renderPage(props.token, loggedIn())
 }
 
 export default Create

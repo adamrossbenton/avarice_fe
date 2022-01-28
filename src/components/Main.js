@@ -10,7 +10,7 @@ function Main(props) {
         </>
     }
     
-    return props.token? loggedIn() : props.ifLoggedIn()
+    return props.token? loggedIn() : props.notLoggedIn()
 }
 
 export default Main

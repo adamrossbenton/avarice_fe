@@ -8,10 +8,10 @@ function Index(props) {
     // useEffect to set initial scene
     useEffect(() => props.getSwords(), [])
     
-    // once API call made
-    const loading = () => {
-        return <h1>Loading...</h1>
-    }
+    // // once API call made
+    // const loading = () => {
+    //     return <h1>Loading...</h1>
+    // }
     
     // waiting for API call
     const loaded = () => {
@@ -31,9 +31,8 @@ function Index(props) {
 
     }
 
-    return <>
-        {props.token? props.swords? loaded() : loading() : props.ifLoggedIn()}
-    </>
+    return props.swords? props.renderPage(token, loaded()) : props.loading()
+
 }
 
 export default Index

@@ -27,13 +27,14 @@ function Edit(props) {
     }
 
     const loggedIn = () => {
+
         return <>
             <h1>Edit {sword.name}</h1>
             <form onSubmit={handleSubmit}>
                 <h3>Name:</h3>
                 <input 
                     type="text"
-                    value={editForm.name}
+                    value={editForm? editForm.name : ""}
                     name="name"
                     placeholder="sword name"
                     onChange={handleChange}
@@ -41,7 +42,7 @@ function Edit(props) {
                 <h3>Image URL:</h3>
                 <input 
                     type="text"
-                    value={editForm.image}
+                    value={editForm? editForm.image : ""}
                     name="image"
                     placeholder="image URL"
                     onChange={handleChange}
@@ -49,7 +50,7 @@ function Edit(props) {
                 <h3>Price:</h3>
                 <input 
                     type="number"
-                    value={editForm.price}
+                    value={editForm? editForm.price : 0.00}
                     name="price"
                     placeholder="0.00"
                     step="0.01"
@@ -59,7 +60,7 @@ function Edit(props) {
                 <h3>Length (in):</h3>
                 <input 
                     type="number"
-                    value={editForm.inches}
+                    value={editForm? editForm.inches : 0}
                     name="inches"
                     placeholder="0"
                     min="0"
@@ -68,7 +69,7 @@ function Edit(props) {
                 <h3>Weight (oz):</h3>
                 <input 
                     type="number"
-                    value={editForm.ounces}
+                    value={editForm? editForm.ounces : 0}
                     name="ounces"
                     placeholder="0"
                     min="0"
@@ -77,14 +78,14 @@ function Edit(props) {
                 <h3>Materials:</h3>
                 <input 
                     type="text"
-                    value={editForm.mats}
+                    value={editForm? editForm.mats : ""}
                     name="mats"
                     placeholder="sword construction materials"
                     onChange={handleChange}
                 />
                 <h3>Description:</h3>
                 <textarea 
-                    value={editForm.description}
+                    value={editForm? editForm.description : ""}
                     name="description"
                     placeholder="sword description"
                     cols="40"
@@ -97,7 +98,8 @@ function Edit(props) {
         </>
     }
 
-    return props.token && sword? loggedIn() : props.ifLoggedIn()
+    return sword? props.renderPage(props.token, loggedIn()) : props.loading()
+
 }
 
 export default Edit

@@ -20,11 +20,13 @@ import Login from "./pages/Login"
 // HOOKS
 import SwordsHooks from "./hooks/SwordsHooks"
 import AdminHooks from "./hooks/AdminHooks"
+import RenderHooks from "./hooks/RenderHooks"
 
 function App(props) {
   // HOOKS
   const {swords, getSwords, createSwords, updateSwords, deleteSwords} = SwordsHooks()
-  const {token, setToken, loginUser, handleChange, noUser, ifLoggedIn, handleLogin} = AdminHooks()
+  const {token, setToken, loginUser, handleChange, noUser, handleLogin} = AdminHooks()
+  const {loading, notLoggedIn, renderPage} = RenderHooks()
 
   // ROUTES
   return (
@@ -36,7 +38,7 @@ function App(props) {
           path="/"
           render={(routerProps) => <Main {...routerProps}
             token={token}
-            ifLoggedIn={ifLoggedIn}
+            notLoggedIn={notLoggedIn}
           />}
         />
         {/* ADMIN */}
@@ -55,7 +57,7 @@ function App(props) {
           path="/swords/new"
           render={(routerProps) => <Create {...routerProps}
           token={token}
-          ifLoggedIn={ifLoggedIn}
+          renderPage={renderPage}
           createSwords={createSwords}
           />}
         />
@@ -65,7 +67,8 @@ function App(props) {
           render={(routerProps) => <Edit {...routerProps}
             token={token}  
             swords={swords}
-            ifLoggedIn={ifLoggedIn}
+            loading={loading}
+            renderPage={renderPage}
             getSwords={getSwords}
             updateSwords={updateSwords}
           />}
@@ -76,7 +79,9 @@ function App(props) {
           render={(routerProps) => <Show {...routerProps}
             token={token}
             swords={swords}
-            ifLoggedIn={ifLoggedIn}
+            loading={loading}
+            renderPage={renderPage}
+            getSwords={getSwords}
             deleteSwords={deleteSwords}
           />}
         />
@@ -86,7 +91,8 @@ function App(props) {
           render={(routerProps) => <Index {...routerProps}
             token={token}
             swords={swords}
-            ifLoggedIn={ifLoggedIn}
+            loading={loading}
+            renderPage={renderPage}
             getSwords={getSwords}
           />}
         />
