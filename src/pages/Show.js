@@ -1,7 +1,10 @@
-import React, {useState} from "react"
+import React, {useEffect} from "react"
 import {Link, useHistory} from "react-router-dom"
 
 function Show(props) {
+    
+    useEffect(() => props.getSwords(), [])
+
     const history = useHistory()
     const id = props.match.params.id
     const swords = props.swords?.data
@@ -23,8 +26,7 @@ function Show(props) {
         </>
     }
 
-    return props.renderPage(props.token, sword, loggedIn())
-
+    return props.swords? props.renderPage(props.token, loggedIn()) : props.loading()
 }
 
 export default Show

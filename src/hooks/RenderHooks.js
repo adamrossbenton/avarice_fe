@@ -18,11 +18,9 @@ function RenderHooks() {
         </>
     }
 
-    // Checks if user is logged in and if API call has returned
-    const renderPage = async (token, data, loadFn) => {
-        return token? 
-            await data? loadFn : loading()
-            : notLoggedIn()
+    // Returns rendered page if logged in, otherwise returns login request page
+    const renderPage = (token, loadFn) => {
+        return token? loadFn : notLoggedIn()
     }
 
     return {
@@ -30,7 +28,6 @@ function RenderHooks() {
         notLoggedIn,
         renderPage,
     }
-
 }
 
 export default RenderHooks

@@ -31,7 +31,7 @@ function Index(props) {
 
     }
 
-    return props.renderPage(token, props.swords, loaded())
+    return props.swords? props.renderPage(token, loaded()) : props.loading()
 
 }
 

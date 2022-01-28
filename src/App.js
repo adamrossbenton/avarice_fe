@@ -26,7 +26,7 @@ function App(props) {
   // HOOKS
   const {swords, getSwords, createSwords, updateSwords, deleteSwords} = SwordsHooks()
   const {token, setToken, loginUser, handleChange, noUser, handleLogin} = AdminHooks()
-  const {notLoggedIn, renderPage} = RenderHooks()
+  const {loading, notLoggedIn, renderPage} = RenderHooks()
 
   // ROUTES
   return (
@@ -57,7 +57,7 @@ function App(props) {
           path="/swords/new"
           render={(routerProps) => <Create {...routerProps}
           token={token}
-          notLoggedIn={notLoggedIn}
+          renderPage={renderPage}
           createSwords={createSwords}
           />}
         />
@@ -67,8 +67,7 @@ function App(props) {
           render={(routerProps) => <Edit {...routerProps}
             token={token}  
             swords={swords}
-            // loading={loading}
-            notLoggedIn={notLoggedIn}
+            loading={loading}
             renderPage={renderPage}
             getSwords={getSwords}
             updateSwords={updateSwords}
@@ -80,9 +79,9 @@ function App(props) {
           render={(routerProps) => <Show {...routerProps}
             token={token}
             swords={swords}
-            // loading={loading}
-            notLoggedIn={notLoggedIn}
+            loading={loading}
             renderPage={renderPage}
+            getSwords={getSwords}
             deleteSwords={deleteSwords}
           />}
         />
@@ -92,7 +91,7 @@ function App(props) {
           render={(routerProps) => <Index {...routerProps}
             token={token}
             swords={swords}
-            notLoggedIn={notLoggedIn}
+            loading={loading}
             renderPage={renderPage}
             getSwords={getSwords}
           />}
