@@ -23,7 +23,7 @@ function Show(props) {
         </>
     }
 
-    return props.token? loggedIn() : props.ifLoggedIn()
+    return props.token && swords? loggedIn() : props.ifLoggedIn()
 }
 
 export default Show
