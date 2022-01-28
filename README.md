@@ -58,6 +58,7 @@ Language/Technologies:
 * Admin Login
 
 ---REQUIRES AUTH---
+
     * Home Route
         * Index
             * Show
