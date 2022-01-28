@@ -1,8 +1,6 @@
 import React from "react"
 import {Link} from "react-router-dom"
 
-// HOOKS FOR USE ON RESTRICTED PAGES WITH API CALLS
-
 function RenderHooks() {
     
     // Renders while awaiting API call
@@ -23,9 +21,9 @@ function RenderHooks() {
         return token? loadFn : notLoggedIn()
     }
 
+    // EXPORT HOOKS
     return {
         loading,
-        notLoggedIn,
         renderPage,
     }
 }

@@ -1,4 +1,4 @@
-import React, {useState} from "react"
+import React from "react"
 import {Link} from "react-router-dom"
 
 function Login(props) {
@@ -25,7 +25,6 @@ function Login(props) {
                 />
             </label><br />
             <button type="submit">ADMIN LOGIN</button>
-            {/* <input type="submit" value="Admin Login" /> */}
         </form>
         <Link to="/"><h3>Return to Main Page</h3></Link>
     </>

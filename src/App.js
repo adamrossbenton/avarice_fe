@@ -1,5 +1,5 @@
 // DEPENDENCIES
-import React, {useState, useEffect} from "react"
+import React from "react"
 import {Route, Switch} from "react-router-dom"
 
 // STYLES
@@ -25,8 +25,8 @@ import RenderHooks from "./hooks/RenderHooks"
 function App(props) {
   // HOOKS
   const {swords, getSwords, createSwords, updateSwords, deleteSwords} = SwordsHooks()
-  const {token, setToken, loginUser, handleChange, noUser, handleLogin} = AdminHooks()
-  const {loading, notLoggedIn, renderPage} = RenderHooks()
+  const {token, handleChange, handleLogin} = AdminHooks()
+  const {loading, renderPage} = RenderHooks()
 
   // ROUTES
   return (
@@ -38,17 +38,14 @@ function App(props) {
           path="/"
           render={(routerProps) => <Main {...routerProps}
             token={token}
-            notLoggedIn={notLoggedIn}
+            renderPage={renderPage}
           />}
         />
         {/* ADMIN */}
         <Route 
           path="/login"
           render={(routerProps) => <Login {...routerProps}
-            setToken={setToken}
-            loginUser={loginUser}
             handleChange={handleChange}
-            noUser={noUser}
             handleLogin={handleLogin}
           />}
         />

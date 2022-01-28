@@ -10,7 +10,7 @@ function Main(props) {
         </>
     }
     
-    return props.token? loggedIn() : props.notLoggedIn()
+    return props.renderPage(props.token, loggedIn())
 }
 
 export default Main

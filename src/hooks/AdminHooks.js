@@ -1,5 +1,5 @@
 import {useState} from "react"
-import {useHistory, Link} from "react-router-dom"
+import {useHistory} from "react-router-dom"
 import url from "./url"
 
 function AdminHooks() {
@@ -74,15 +74,10 @@ function AdminHooks() {
         }
     }
 
+    // EXPORT HOOKS
     return {
-        // TOKEN
         token,
-        setToken: saveToken,
-        // LOGIN
-        loginUser,
-        // FORM HANDLERS
         handleChange,
-        noUser,
         handleLogin
     }
 }
