@@ -24,7 +24,7 @@ function Login(props) {
                     onChange={props.handleChange}
                 />
             </label><br />
-            <button type="submit">ADMIN LOGIN</button>
+            <button type="submit"><h3>ADMIN LOGIN</h3></button>
         </form>
         <Link to="/"><h3 className="link-text">Return to Main Page</h3></Link>
     </>

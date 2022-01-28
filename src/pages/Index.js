@@ -13,7 +13,7 @@ function Index(props) {
         const allSwords = props.swords.data
         
         return <div className="top-container" id="index-container">
-            <Link to="/swords/new"><h3 className="link-text">NEW SWORD</h3></Link>
+            <Link to="/swords/new"><h1 className="link-text">NEW SWORD</h1></Link>
             {allSwords.map((sw) => (
                 <div className="item-container">
                     <img src={sw.image} alt="" />
