@@ -71,7 +71,7 @@ NOTE: If user is not logged in, all pages/components other than home and login a
 I started dabbling in Golang maybe a month or so before starting this project, and at that time I had planned on using Buffalo for my API framework. However, I decided to pivot (read: had a small nervous breakdown) for the following reasons:
 
 * Buffalo is super opinionated and pretty finicky. Think Ruby on Rails, but the syntax is angry. Not my favorite way to start using a language about which I know very little.
-* I don't know what kind of weird little goblin lives inside my PC but it does NOT like Buffalo for some reason.
+* I don't know what kind of weird little goblin lives inside my laptop but it does NOT like Buffalo for some reason.
 
 At this point, I decided to pivot from the strict and overbearing Buffalo to the much lighter and more freeform gin. Gin is ultra minimalist, super lighweight, and supported by a very passionate and knowledgable dev community. It's like Go's version of ExpressJS, except it's way faster and has an army of nerds backing it up.
 
