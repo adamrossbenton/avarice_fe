@@ -56,6 +56,7 @@ Language/Technologies:
 #### Components
 
 * Admin Login
+
 ---REQUIRES AUTH---
     * Home Route
         * Index
