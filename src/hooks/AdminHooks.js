@@ -53,13 +53,6 @@ function AdminHooks() {
         }
     }
 
-    const ifLoggedIn = () => {
-        return <>
-            <h1>ADMIN ACCESS REQUIRED</h1>
-            <Link to="/login"><h3>ADMIN LOGIN</h3></Link>
-        </>
-    }
-
     const handleLogin = async e => {
         setAttempts(attempts+1)
         e.preventDefault()
@@ -90,7 +83,6 @@ function AdminHooks() {
         // FORM HANDLERS
         handleChange,
         noUser,
-        ifLoggedIn,
         handleLogin
     }
 }

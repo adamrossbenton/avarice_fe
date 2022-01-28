@@ -97,7 +97,8 @@ function Edit(props) {
         </>
     }
 
-    return props.token && sword? loggedIn() : props.ifLoggedIn()
+    return props.renderPage(props.token, sword, loggedIn())
+
 }
 
 export default Edit
