@@ -70,12 +70,16 @@ NOTE: If user is not logged in, all pages/components other than home and login a
 
 I started dabbling in Golang maybe a month or so before starting this project, and at that time I had planned on using Buffalo for my API framework. However, I decided to pivot (read: had a small nervous breakdown) for the following reasons:
 
-* Buffalo is super opinionated and pretty finicky. Think Ruby on Rails, but the syntax is angry. Not my favorite way to start using a language about which I know very little.
+* Buffalo is super opinionated and pretty finicky. Imagine Rails, but the syntax is angry. Not my favorite way to start using a language about which I know very little.
 * I don't know what kind of weird little goblin lives inside my laptop but it does NOT like Buffalo for some reason.
 
 At this point, I decided to pivot from the strict and overbearing Buffalo to the much lighter and more freeform gin. Gin is ultra minimalist, super lighweight, and supported by a very passionate and knowledgable dev community. It's like Go's version of ExpressJS, except it's way faster and has an army of nerds backing it up.
 
 In short, Buffalo is the strict dad that grounds you if you're home at 9:00 for your 8:59 curfew, while Gin is the chill mom that lets you drink at home because she'd "rather you do it here than at a stranger's house." Personally, I know which one I'd rather hang out with.
+
+#### My dog ate my database
+
+For some reason, whenever I add, remove, or modify anything in my database, after about 12 hours or so the database seems to "reset" itself and return to how it was at an earlier stage. I'm still not 100% sure why, I suspect it has something to do with gin/GORM automatically migrating data. In my initial API setup I included a method called AutoMigrate, but disabling this doesn't seem to solve the issue. I will continue to explore this issue, as this would be extremely problematic if I ever wanted to actually make money.
 
 ## COMING SOON TO A WEBSITE NEAR YOU!
 
