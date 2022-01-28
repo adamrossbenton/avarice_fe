@@ -6,14 +6,14 @@ function Header(props) {
         localStorage.clear()
     }
 
-    return <>
-        <h1>Hello Header</h1>
+    return <div className="header">
+        <h1>A V A R I C E</h1>
         {props.token?
             <form onSubmit={logout}>
                 <input type="submit" value="logout" />
             </form>
         : null}
-    </>
+    </div>
 }
 
 export default Header

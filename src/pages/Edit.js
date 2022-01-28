@@ -94,7 +94,7 @@ function Edit(props) {
                 ></textarea>
                 <input type="submit" value={`Update ${sword.name}`} />
             </form>
-            <Link to={`/swords/${sword.id}`}>CANCEL</Link>
+            <Link to={`/swords/${sword.id}`}><h3 className="link-text">CANCEL</h3></Link>
         </>
     }
 

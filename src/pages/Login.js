@@ -26,7 +26,7 @@ function Login(props) {
             </label><br />
             <button type="submit">ADMIN LOGIN</button>
         </form>
-        <Link to="/"><h3>Return to Main Page</h3></Link>
+        <Link to="/"><h3 className="link-text">Return to Main Page</h3></Link>
     </>
 }
 

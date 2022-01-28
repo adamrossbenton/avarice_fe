@@ -1,0 +1,99 @@
+:root {
+    --font-tan: rgb(151,128,118);
+    --font-crimson: rgb(90,25,10);
+    --bg-crimson-fade-top-medium: linear-gradient(rgba(90,25,10,0.75),rgba(255,255,250,0));
+    --bg-crimson-fade-bottom-strong: linear-gradient(rgba(0,0,0,0),rgb(90,25,10));
+}
+
+.no-small-screen {
+    display: none;
+}
+
+body {
+    background-image: url('../public/images/coals.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center
+}
+
+img {
+    height: 150px;
+    width: 300px;
+}
+
+.link-text {
+    font-family: 'Metal Mania', cursive;
+    color: var(--font-tan);
+    -webkit-text-stroke: 1px var(--font-crimson);
+    -moz-text-stroke: 1px var(--font-crimson);
+}
+
+.header {
+    width: 100%;
+    margin: 0 auto;
+    padding: 3px;
+    font-family: 'Metal Mania', cursive;
+    background-image: var(--bg-crimson-fade-top-medium);
+    color: var(--font-tan);
+    font-size: 2em;
+    -webkit-text-stroke: 3px var(--font-crimson);
+}
+
+.footer {
+    color: var(--font-tan);
+}
+
+.top-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.item-container {
+    Background-color: rgba(0,0,0,0.5);
+    margin: 5px;
+    padding: 5px;
+    width: 90%;
+    border-radius: 25px;
+    color: var(--font-tan)
+}
+
+/* TABLET QUERIES */
+@media (min-width: 480px) {
+    #index-container > .item-container {
+        display: flex;
+        justify-content: space-between;
+    }
+    .no-small-screen {
+        display: block;
+    }
+    .header {
+        font-size: 3em;
+    }
+    .item-text-container {
+        display: flex;
+        flex-direction: column;
+        padding-right: 5px;
+    }
+    .item-text-container > * {
+        display: flex;
+        justify-content: right;
+        padding: 5px;
+    }
+    img {
+        border-radius: 20px;
+    }
+}
+
+/* COMPUTER QUERIES */
+@media (min-width: 769px) {
+    .header {
+        font-size: 4em;
+    }
+}
+
+@media (min-width: 1100px) {
+    .item-container {
+        width: 60%
+    }
+}
