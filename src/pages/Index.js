@@ -20,7 +20,7 @@ function Index(props) {
                     <div className="item-text-container">
                         <Link to={`/swords/${sw.id}`}><h1 className="link-text">{sw.name}</h1></Link>
                         <h3>{sw.price}</h3>
-                        <p className="no-small-screen">{sw.description}</p>
+                        {/* <p className="no-small-screen">{sw.description}</p> */}
                     </div>
                 </div>
             ))}
