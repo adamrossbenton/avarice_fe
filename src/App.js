@@ -32,69 +32,71 @@ function App(props) {
   // ROUTES
   return (
     <div className="App">
-      <Header token={token}/>
-      <Switch>
-        {/* HOME ROUTE */}
-        <Route exact
-          path="/"
-          render={(routerProps) => <Main {...routerProps}
+      <div className="contents">
+        <Header token={token}/>
+        <Switch>
+          {/* HOME ROUTE */}
+          <Route exact
+            path="/"
+            render={(routerProps) => <Main {...routerProps}
+              token={token}
+              renderPage={renderPage}
+            />}
+          />
+          {/* ADMIN */}
+          <Route 
+            path="/login"
+            render={(routerProps) => <Login {...routerProps}
+              handleChange={handleChange}
+              handleLogin={handleLogin}
+            />}
+          />
+          {/* CREATE */}
+          <Route 
+            path="/swords/new"
+            render={(routerProps) => <Create {...routerProps}
             token={token}
             renderPage={renderPage}
-          />}
-        />
-        {/* ADMIN */}
-        <Route 
-          path="/login"
-          render={(routerProps) => <Login {...routerProps}
-            handleChange={handleChange}
-            handleLogin={handleLogin}
-          />}
-        />
-        {/* CREATE */}
-        <Route 
-          path="/swords/new"
-          render={(routerProps) => <Create {...routerProps}
-          token={token}
-          renderPage={renderPage}
-          createSwords={createSwords}
-          />}
-        />
-        {/* EDIT */}
-        <Route 
-          path="/swords/:id/edit"
-          render={(routerProps) => <Edit {...routerProps}
-            token={token}  
-            swords={swords}
-            loading={loading}
-            renderPage={renderPage}
-            getSwords={getSwords}
-            updateSwords={updateSwords}
-          />}
-        />
-        {/* SHOW */}
-        <Route 
-          path="/swords/:id"
-          render={(routerProps) => <Show {...routerProps}
-            token={token}
-            swords={swords}
-            loading={loading}
-            renderPage={renderPage}
-            getSwords={getSwords}
-            deleteSwords={deleteSwords}
-          />}
-        />
-        {/* INDEX */}
-        <Route 
-          path="/swords"
-          render={(routerProps) => <Index {...routerProps}
-            token={token}
-            swords={swords}
-            loading={loading}
-            renderPage={renderPage}
-            getSwords={getSwords}
-          />}
-        />
-      </Switch>
+            createSwords={createSwords}
+            />}
+          />
+          {/* EDIT */}
+          <Route 
+            path="/swords/:id/edit"
+            render={(routerProps) => <Edit {...routerProps}
+              token={token}  
+              swords={swords}
+              loading={loading}
+              renderPage={renderPage}
+              getSwords={getSwords}
+              updateSwords={updateSwords}
+            />}
+          />
+          {/* SHOW */}
+          <Route 
+            path="/swords/:id"
+            render={(routerProps) => <Show {...routerProps}
+              token={token}
+              swords={swords}
+              loading={loading}
+              renderPage={renderPage}
+              getSwords={getSwords}
+              deleteSwords={deleteSwords}
+            />}
+          />
+          {/* INDEX */}
+          <Route 
+            path="/swords"
+            render={(routerProps) => <Index {...routerProps}
+              token={token}
+              swords={swords}
+              loading={loading}
+              renderPage={renderPage}
+              getSwords={getSwords}
+            />}
+          />
+        </Switch>
+      </div>
       <Footer />
 </div>
   );
