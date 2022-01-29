@@ -157,6 +157,21 @@ a.dropdown-item {
     color: var(--font-tan)
 }
 
+.show-specs > h1 {
+    font-family: 'Metal Mania', cursive;
+    -webkit-text-stroke: 1px var(--font-crimson);
+    -moz-text-stroke: 1px var(--font-crimson);
+    font-weight: bolder;
+}
+
+.show-description {
+    background-color: rgba(150,150,150,0.5);
+    color: black;
+    padding: 10px;
+    border-radius: 25px;
+}
+
+
 /* EDIT */
 
 .edit-container {
