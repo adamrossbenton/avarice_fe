@@ -179,9 +179,9 @@ a.dropdown-item {
 }
 
 
-/* EDIT */
+/* EDIT/CREATE */
 
-.edit-container {
+.edit-container, .new-container {
     background-color: rgba(0,0,0,0.5);
     margin: 0 auto;
     padding: 5px;
@@ -195,6 +195,12 @@ a.dropdown-item {
 }
 
 .edit-container > h1, h3 {
+    font-family: 'Metal Mania', cursive;
+    -webkit-text-stroke: 1px var(--font-crimson);
+    -moz-text-stroke: 1px var(--font-crimson);
+}
+
+.new-container > h1, h3 {
     font-family: 'Metal Mania', cursive;
     -webkit-text-stroke: 1px var(--font-crimson);
     -moz-text-stroke: 1px var(--font-crimson);

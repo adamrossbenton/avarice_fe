@@ -35,7 +35,7 @@ function Create(props) {
     }
 
     const loggedIn = () => {
-        return <>
+        return <div className="new-container">
             <h1>Create Sword</h1>
             <form onSubmit={handleSubmit}>
                 <h3>Name:</h3>
@@ -98,11 +98,11 @@ function Create(props) {
                     cols="40"
                     rows="5"
                     onChange={handleChange}
-                ></textarea>
+                ></textarea><br />
                 <input type="submit" value="Create Sword" />
             </form>
             <Link to="/swords"><h3 className="link-text">BACK TO INDEX</h3></Link>
-        </>
+        </div>
     }
 
     return props.renderPage(props.token, loggedIn())
