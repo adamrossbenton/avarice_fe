@@ -4,7 +4,7 @@ import {Link} from "react-router-dom"
 function Login(props) {
     
     return <>
-        <h1>ENTER ADMIN LOGIN INFO</h1>
+        <h1 id="login-title">ENTER ADMIN LOGIN INFO</h1>
         <form onSubmit={props.handleLogin}>
             <label>
                 <p>Username: </p>
@@ -24,9 +24,9 @@ function Login(props) {
                     onChange={props.handleChange}
                 />
             </label><br />
-            <button type="submit">ADMIN LOGIN</button>
+            <button type="submit"><h3>ADMIN LOGIN</h3></button>
         </form>
-        <Link to="/"><h3>Return to Main Page</h3></Link>
+        <Link to="/"><h3 className="link-text">Return to Main Page</h3></Link>
     </>
 }
 

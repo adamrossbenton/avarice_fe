@@ -101,7 +101,7 @@ function Create(props) {
                 ></textarea>
                 <input type="submit" value="Create Sword" />
             </form>
-            <Link to="/swords"><h3>BACK TO INDEX</h3></Link>
+            <Link to="/swords"><h3 className="link-text">BACK TO INDEX</h3></Link>
         </>
     }
 

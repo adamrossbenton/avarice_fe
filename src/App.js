@@ -4,6 +4,7 @@ import {Route, Switch} from "react-router-dom"
 
 // STYLES
 import './App.css'; // This will probably get removed in favor of bootstrap, etc.
+import "./styles.css"
 
 // COMPONENTS
 import Main from "./components/Main"

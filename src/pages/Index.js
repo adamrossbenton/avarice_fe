@@ -12,17 +12,19 @@ function Index(props) {
     const loaded = () => {
         const allSwords = props.swords.data
         
-        return <>
-            <Link to="/swords/new"><h3>NEW SWORD</h3></Link>
+        return <div className="top-container" id="index-container">
+            <Link to="/swords/new"><h1 className="link-text">NEW SWORD</h1></Link>
             {allSwords.map((sw) => (
-                <>
-                    <Link to={`/swords/${sw.id}`}><h1>{sw.name}</h1></Link>
+                <div className="item-container">
                     <img src={sw.image} alt="" />
-                    <h3>{sw.price}</h3>
-                    <h5>{sw.description}</h5>
-                </>
+                    <div className="item-text-container">
+                        <Link to={`/swords/${sw.id}`}><h1 className="link-text">{sw.name}</h1></Link>
+                        <h3>{sw.price}</h3>
+                        <p className="no-small-screen">{sw.description}</p>
+                    </div>
+                </div>
             ))}
-        </>
+        </div>
 
     }
 

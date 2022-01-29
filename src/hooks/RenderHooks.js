@@ -5,14 +5,14 @@ function RenderHooks() {
     
     // Renders while awaiting API call
     const loading = () => {
-        return <h2>Loading...</h2>
+        return <h2 className="render">Loading...</h2>
     }
 
     // Prompts user to login if not logged in
     const notLoggedIn = () => {
         return <>
-            <h1>ADMIN ACCESS REQUIRED</h1>
-            <Link to="/login"><h3>ADMIN LOGIN</h3></Link>
+            <h1 className="render">ADMIN ACCESS REQUIRED</h1>
+            <Link to="/login" className="link-text"><h3>ADMIN LOGIN</h3></Link>
         </>
     }
 
