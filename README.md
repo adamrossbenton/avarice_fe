@@ -79,7 +79,7 @@ In short, Buffalo is the strict dad that grounds you if you're home at 9:00 for 
 
 #### My dog ate my database
 
-For some reason, whenever I add, remove, or modify anything in my database, after about 12 hours or so the database seems to "reset" itself and return to how it was at an earlier stage. I'm still not 100% sure why, I suspect it has something to do with gin/GORM automatically migrating data. In my initial API setup I included a method called AutoMigrate, but disabling this doesn't seem to solve the issue. I will continue to explore this issue, as this would be extremely problematic if I ever wanted to actually make money.
+For some reason, whenever I add, remove, or modify anything in my database, after about 12 hours or so the database seems to "reset" itself and return to how it was at an earlier stage. I'm still not 100% sure why, I suspect it has something to do with gin/GORM automatically migrating data. In my initial API setup I included a method called AutoMigrate, but disabling this doesn't seem to solve the issue. I'm gonna keep looking into it, as this would be extremely problematic if I ever want to actually make money.
 
 ## COMING SOON TO A WEBSITE NEAR YOU!
 

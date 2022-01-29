@@ -28,7 +28,7 @@ function Edit(props) {
 
     const loggedIn = () => {
 
-        return <>
+        return <div className="edit-container">
             <h1>Edit {sword.name}</h1>
             <form onSubmit={handleSubmit}>
                 <h3>Name:</h3>
@@ -91,11 +91,11 @@ function Edit(props) {
                     cols="40"
                     rows="5"
                     onChange={handleChange}
-                ></textarea>
+                ></textarea><br/>
                 <input type="submit" value={`Update ${sword.name}`} />
             </form>
             <Link to={`/swords/${sword.id}`}><h3 className="link-text">CANCEL</h3></Link>
-        </>
+        </div>
     }
 
     return sword? props.renderPage(props.token, loggedIn()) : props.loading()

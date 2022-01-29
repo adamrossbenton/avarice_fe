@@ -1,8 +1,10 @@
+/* GLOBAL */
 :root {
     --font-tan: rgb(151,128,118);
     --font-crimson: rgb(90,25,10);
     --bg-crimson-fade-top-medium: linear-gradient(rgba(90,25,10,0.75),rgba(255,255,250,0));
     --bg-crimson-fade-bottom-strong: linear-gradient(rgba(0,0,0,0),rgb(90,25,10));
+    --faded-crimson: rgba(90,25,10,0.75)
 }
 
 .no-small-screen {
@@ -19,6 +21,7 @@ body {
 img {
     height: 150px;
     width: 300px;
+    border-radius: 15px;
 }
 
 .link-text {
@@ -26,6 +29,32 @@ img {
     color: var(--font-tan);
     -webkit-text-stroke: 1px var(--font-crimson);
     -moz-text-stroke: 1px var(--font-crimson);
+}
+
+form {
+    color: var(--font-tan)
+}
+
+.render {
+    font-family: 'Metal Mania', cursive;
+    color: var(--font-tan);
+    -webkit-text-stroke: 1px var(--font-crimson);
+    -moz-text-stroke: 1px var(--font-crimson);
+}
+
+/* HEADER */
+
+#header-navbar {
+    background-color: rgba(90,25,10,0.75) !important;
+    font-family: 'Metal Mania', cursive;
+}
+
+.dropdown-menu {
+    background-image: linear-gradient(var(--faded-crimson) 0, var(--font-tan) 15%, var(--font-tan) 50%, var(--font-tan) 85%, var(--faded-crimson) 100%);
+}
+
+a.dropdown-item {
+    color: var(--font-crimson);
 }
 
 .header {
@@ -41,7 +70,7 @@ img {
     /* text-stroke: 3px var(--font-crimson); */
 }
 
-.header > h1, h5 {
+.header > h1#header-title, h5 {
     margin-top: 5px;
     margin-bottom: 10px;
 }
@@ -52,12 +81,49 @@ img {
     /* text-stroke: 1px var(--font-crimson); */
 }
 
+#login-title {
+    font-size: 2em !important;
+}
+
+.header > h1 {
+    font-size: 2em !important;
+}
+
+.header > h5#header-subtitle {
+    font-size: 1em !important;
+}
+
+#login-title {
+    font-family: 'Metal Mania', cursive;
+    color: var(--font-tan);
+    -webkit-text-stroke: 1px var(--font-crimson);
+    -moz-text-stroke: 1px var(--font-crimson);
+}
+
 .logout-button {
     font-size: 18px;
+    font-family: 'Supermercado One', cursive !important;
 }
+
+/* FOOTER */
 
 .footer {
     color: var(--font-tan);
+}
+
+/* MAIN */
+
+.main-container {
+    font-family: 'Metal Mania', cursive;
+    color: var(--font-tan);
+    -webkit-text-stroke: 1px var(--font-crimson);
+    -moz-text-stroke: 1px var(--font-crimson);
+}
+
+.main-p {
+    padding: 10px;
+    font-size: larger;
+    background-image: linear-gradient(rgba(0,0,0,0) 0, rgba(0,0,0,0.75) 15%, rgba(0,0,0,0.75) 85%, rgba(0,0,0,0) 100%)
 }
 
 .top-container {
@@ -66,13 +132,50 @@ img {
     align-items: center;
 }
 
+/* INDEX */
+
 .item-container {
-    Background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,0.5);
     margin: 5px;
     padding: 5px;
     width: 90%;
     border-radius: 25px;
     color: var(--font-tan)
+}
+
+/* SHOW */
+
+.show-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(0,0,0,0.5);
+    margin: 0 auto;
+    padding: 5px;
+    width: 90%;
+    border-radius: 25px;
+    color: var(--font-tan)
+}
+
+/* EDIT */
+
+.edit-container {
+    background-color: rgba(0,0,0,0.5);
+    margin: 0 auto;
+    padding: 5px;
+    width: 90%;
+    border-radius: 25px;
+    color: var(--font-tan);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.edit-container > h1, h3 {
+    font-family: 'Metal Mania', cursive;
+    -webkit-text-stroke: 1px var(--font-crimson);
+    -moz-text-stroke: 1px var(--font-crimson);
 }
 
 /* TABLET QUERIES */
@@ -85,7 +188,7 @@ img {
         display: block;
     }
     .header {
-        font-size: 3em;
+        font-size: 4em;
     }
     .item-text-container {
         display: flex;
@@ -101,17 +204,44 @@ img {
     img {
         border-radius: 20px;
     }
+    .show-container-sublevel {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px;
+    }
+    .show-specs {
+        display: flex;
+        flex-direction: column;
+        margin-right: 10px;
+        text-align: right;
+    }
+    .show-admin-options {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .show-description {
+        text-align: left;
+        margin: 0px 10px 0px 10px;
+    }
 }
 
 /* COMPUTER QUERIES */
 @media (min-width: 769px) {
-    .header {
-        font-size: 4em;
+    h1.header-title {
+        font-size: 3em;
+    }
+    h5.header-title {
+        font-size: 1em;
     }
 }
 
 @media (min-width: 1100px) {
     .item-container {
         width: 60%
+    }
+    h1#header-title {
+        font-size: 5em !important;
     }
 }
